@@ -1,0 +1,8 @@
+.express {
+    width: 150px;
+    height: 150px;
+}
+
+.border.border-dotted {
+    border-style: dotted !important;
+}
