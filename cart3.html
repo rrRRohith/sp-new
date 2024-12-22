@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="bg-white w-100">
+        <div class="container">
+            <div class="d-flex align-content-centerS">
+                <img src="https://www.pumpernickels.ca/images/header_logo.png" alt="">
+                <!-- <img src="https://www.pumpernickels.ca/images/header_logo2.png" alt=""> -->
+            </div>
+        </div>
+        <div class="w-100 position-relative">
+            <div class="position-absolute bg-black top-0 start-0 h-100"></div>
+            <div class="container">
+                <div class="d-flex text-warning align-items-center">
+                    <div class="p-2 py-1 pe-3 bg-black">
+                        <img src="https://www.pumpernickels.ca/images/menu_1_bg.png" alt=""> Order Online
+                    </div>
+                    <div class="p-2 py-1 pe-3 bg-black text-white">
+                        Catering
+                    </div>
+                    <div class="p-2 py-1 pe-3 bg-black text-white">
+                        Express Takeout
+                    </div>
+
+                    <div class="menu-divider p-2 py-1 pe-3 bg-black">
+                        <div class="opacity-0">.</div>
+                    </div>
+                    <div class="p-2 py-1 text-black small">
+                        Find Location
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section style="background-image: url('/back_body.jpg');">
+            <div class="container py-5">
+                <h3 class="text-warning fw-light mb-5 text-uppercase">Shipping info</h3>
+                <div class="bg-white rounded-1">
+                    <div class="bg-black ">
+                        <div class="d-flex w-100 text-light">
+                            <div class="col d-flex">
+                                <div class="p-3 flex-1">
+                                    <span class="badge rounded-pill bg-light text-dark">
+                                        1
+                                    </span>
+                                    Shopping Cart
+                                </div>
+                                <img height="56" src="https://www.pumpernickels.ca/images/step2_black.png" alt="">
+                            </div>
+                            <div class="bg-black text-light col">
+                                <div class="d-flex align-items-center">
+                                    <div class="p-3 flex-1">
+                                        <span class="badge rounded-pill bg-light text-dark">
+                                            2
+                                        </span>
+                                        Disposable Utensils
+                                    </div>
+                                    <div class="warning-border-left"></div>
+                                </div>
+
+                            </div>
+                            <div class="col d-flex">
+                                <div class="p-3 bg-warning flex-1">
+                                    <span class="badge rounded-pill bg-light text-dark">
+                                        3
+                                    </span>
+                                    Shipping info
+                                </div>
+                                <div class="warning-border left"></div>
+                            </div>
+                            <div class="bg-black text-light col">
+                                <div class="p-3">
+                                    <span class="badge rounded-pill bg-light text-dark">
+                                        4
+                                    </span>
+                                    Payment Method
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 p-md-5" x-data="{shipping:'pickup'}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-4"><strong>Select</strong> your shipping options</div>
+                                <div class="d-flex">
+                                    <div class="form-check form-inline me-2">
+                                        <input @click="shipping='delivery'" class="form-check-input"
+                                            :checked="shipping=='delivery'" type="radio" name="radio" id="" />
+                                        <label class="form-check-label" for=""> Please delivery </label>
+                                    </div>
+                                    <div class="form-check form-inline">
+                                        <input @click="shipping='pickup'" class="form-check-input"
+                                            :checked="shipping=='pickup'" type="radio" name="radio" id="" />
+                                        <label class="form-check-label" for=""> I will pickup </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4" x-show="shipping=='delivery'">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div>Select shipping address</div>
+                                            <div class="btn btn-warning">Add New Address</div>
+                                        </div>
+                                        <div class="col-6 mt-4">
+                                            <input type="date"
+                                                class="form-control bg-light border border-1 shadow-none py-3">
+                                        </div>
+                                        <div class="col-6 mt-4">
+                                            <input type="time"
+                                                class="form-control bg-light border border-1 shadow-none py-3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4" x-show="shipping=='pickup'">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="dropdown w-100">
+                                                <button class="btn w-100 btn-light border border-1 py-3 text-start"
+                                                    type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="me-auto">Select pickup locations</div>
+                                                        <div><i class="bi bi-arrow-down-up"></i></div>
+                                                    </div>
+                                                </button>
+                                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Location</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another Location</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another Secret Location</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mt-4">
+                                            <input type="date"
+                                                class="form-control bg-light border border-1 shadow-none py-3">
+                                        </div>
+                                        <div class="col-6 mt-4">
+                                            <input type="time"
+                                                class="form-control bg-light border border-1 shadow-none py-3">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <textarea placeholder="Delivery instructions" name=""
+                                        class="form-control rounded-1 border border-1 shadow-none" id=""></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="mb-4"><strong>Contact</strong> info</div>
+                                </div>
+                                <div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control shadow-none py-3" placeholder="Company Name" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control shadow-none py-3" placeholder="First Name" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control shadow-none py-3" placeholder="Last Name" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control shadow-none py-3" placeholder="Phone" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control shadow-none py-3" placeholder="Email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="fw-semibold">PLEASE NOTE THESE GUIDELINES FOR DELIVERY :</div>
+                                <div>
+                                    We deliver all across Toronto and the most areas of the GTA. Food is delivered from
+                                    7:00 am to 5:30 pm Monday to Friday (except Statutory holidays). <br><br>
+
+                                    Delivery charges for Saturdays or outside GTA will be determined after check-out.
+                                    <br><br>
+
+                                    For further details, please see our FAQ page or ask us any questions regarding
+                                    delivery in the live chat below.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-4">
+                            <div>
+                                <a class="text-decoration-none text-muted" href="cart2.html"><i
+                                        class="bi bi-arrow-left-circle"></i> Disposable Utensils</a>
+                            </div>
+                            <div class="ms-auto">
+                                <a href="/cart4.html">
+                                    <button class="btn-dark text-warning btn btn-lg rounded-1">Payment method <i
+                                            class="bi bi-chevron-right"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <section class="bg-dark w-100">
+            <div class="container py-5">
+                <div class="row text-warning">
+                    <div class="col">
+                        <div class="">
+                            <div class="text-capitalize fs-4 mb-2">
+                                Work With Us
+                            </div>
+                            <div class="mb-2">
+                                Careers
+                            </div>
+                            <div>
+                                Franchise FAQ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <div class="text-capitalize fs-4 mb-2">
+                                Questions
+                            </div>
+                            <div class="mb-2">
+                                Locations
+                            </div>
+                            <div>
+                                Contact us
+                            </div>
+                            <div>
+                                FAQ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <div class="text-capitalize fs-4 mb-2">
+                                About
+                            </div>
+                            <div class="mb-2">
+                                Our Story
+                            </div>
+                            <div>
+                                Our People
+                            </div>
+                            <div>
+                                Our Partners
+                            </div>
+                            <div>
+                                Clients & Testimonials
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <div class="text-capitalize fs-4 mb-2">
+                                Connect
+                            </div>
+                            <div class="mb-2">
+                                <div class="d-flex">
+                                    <div class="me-2">
+                                        <i class="bi bi-facebook"></i>
+                                    </div>
+                                    <div class="me-2">
+                                        <i class="bi bi-twitter"></i>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://www.pumpernickels.ca/images/pumpernickels_bottom_logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container text-warning pb-3">
+                <div class="d-flex">
+                    <div class="me-auto">
+                        ©2024 Pumpernickels.ca
+                    </div>
+                    <div class="me-2">
+                        Sitemap
+                    </div>
+                    <div>
+                        Privacy Policy
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
