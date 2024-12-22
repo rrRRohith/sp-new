@@ -8,10 +8,6 @@ body{
     height: 150px;
 }
 
-.border.border-dotted {
-    border-style: dotted !important;
-}
-
 .menu-divider {
     background-image: url(https://www.pumpernickels.ca/images/angular_divisor.png);
     background-size: contain;

@@ -18,114 +18,191 @@
 
 <body>
     <header class="bg-white w-100" x-data="{showFindLocation:false, showMenu:false}">
-        <div class="container">
-            <div class="d-flex align-content-end align-items-end">
-                <a href="/index.html"><img src="https://www.pumpernickels.ca/images/header_logo.png" alt=""></a>
-                <div class="ms-auto">
-                    <div class="small">Toronto & GTA</div>
-                    <div class="fw-bold fs-5">416.863.9880</div>
+        <div class="w-100 d-block d-lg-none">
+            <div class="container py-3">
+                <div class="d-flex align-content-end align-items-end">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="/index.html"><img class="w-100" src="https://www.pumpernickels.ca/images/header_logo.png" alt=""></a>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <div class="small">Toronto & GTA</div>
+                            <div class="fw-bold fs-5">416.863.9880</div>
+                            <div class="ms-auto fs-5 ">
+                                <div class="d-flex">
+                                    <div class="ms-auto">
+                                        <a href="/account.html" class="text-dark text-decoration-none">LOGIN</a>
+                                    </div>
+                                    <div class="mx-1">|</div>
+                                    <div>
+                                        <a href="/account.html" class="text-dark text-decoration-none">REGISTER</a>
+                                    </div>
+                                    <div class="mx-2">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </div>
+                                    <div>
+                                        <a href="/cart.html" class="text-decoration-none text-dark">Cart [1]</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="w-100 bg-dark">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#">Menu</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/pickup.html">Express Takeout</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/menu1.html">Order Good Food</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/location.html">Locations</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/catelog.html">Browse catelogue</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
                 </div>
             </div>
         </div>
-        <div class="w-100 position-relative">
-            <div class="position-absolute bg-black top-0 start-0 h-100 w-50"></div>
-            <div class="container position-relative">
-                <div class="d-flex bg-white">
-                    <div class="d-flex text-warning align-items-center bg-white fs-5">
-                        <div class="p-2 py-1 pe-3 bg-black">
-                            <img src="https://www.pumpernickels.ca/images/menu_1_bg.png" alt=""> Order Online
-                        </div>
-                        <div class="p-2 py-1 pe-3 bg-black text-white" x-on:mouseenter="showMenu = true"
-                        x-on:mouseleave="showMenu = false" role="button">
-                            Catering
-                        </div>
-                        <a href="pickup.html" class="text-decoration-none">
-                            <div class="p-2 py-1 pe-3 bg-black text-white" role="button">
-                                Express Takeout
-                            </div>
-                        </a>
-
-                        <div class="menu-divider p-2 py-1 pe-3 bg-black">
-                            <div class="opacity-0">.</div>
-                        </div>
-                        <div class="p-2 py-1 text-black small" role="button" x-on:mouseenter="showFindLocation = true"
-                            x-on:mouseleave="showFindLocation = false">
-                            Find Location
-                        </div>
+        <div class="w-100 d-none d-lg-block">
+            <div class="container">
+                <div class="d-flex align-content-end align-items-end">
+                    <a href="/index.html"><img src="https://www.pumpernickels.ca/images/header_logo.png" alt=""></a>
+                    <div class="ms-auto">
+                        <div class="small">Toronto & GTA</div>
+                        <div class="fw-bold fs-5">416.863.9880</div>
                     </div>
-                    <div class="ms-auto fs-5">
-                        <div></div>
-                        <div class="d-flex">
-                            <div>
-                                <a href="/account.html" class="text-dark text-decoration-none">LOGIN</a>
+                </div>
+            </div>
+            <div class="w-100 position-relative">
+                <div class="position-absolute bg-black top-0 start-0 h-100 w-50"></div>
+                <div class="container position-relative">
+                    <div class="d-flex bg-white">
+                        <div class="d-flex text-warning align-items-center bg-white fs-5">
+                            <div class="p-2 py-1 pe-3 bg-black">
+                                <img src="https://www.pumpernickels.ca/images/menu_1_bg.png" alt=""> Order Online
                             </div>
-                            <div class="mx-1">|</div>
-                            <div>
-                                <a href="/account.html" class="text-dark text-decoration-none">REGISTER</a>
+                            <div class="p-2 py-1 pe-3 bg-black text-white" x-on:mouseenter="showMenu = true"
+                                x-on:mouseleave="showMenu = false" role="button">
+                                Catering
                             </div>
-                            <div class="mx-2">
-                                <i class="bi bi-heart-fill"></i>
+                            <a href="pickup.html" class="text-decoration-none">
+                                <div class="p-2 py-1 pe-3 bg-black text-white" role="button">
+                                    Express Takeout
+                                </div>
+                            </a>
+        
+                            <div class="menu-divider p-2 py-1 pe-3 bg-black">
+                                <div class="opacity-0">.</div>
                             </div>
-                            <div>
-                                <a href="/cart.html" class="text-decoration-none text-dark">Cart [1]</a>
+                            <div class="p-2 py-1 text-black small" role="button" x-on:mouseenter="showFindLocation = true"
+                                x-on:mouseleave="showFindLocation = false">
+                                Find Location
+                            </div>
+                        </div>
+                        <div class="ms-auto fs-5">
+                            <div></div>
+                            <div class="d-flex">
+                                <div>
+                                    <a href="/account.html" class="text-dark text-decoration-none">LOGIN</a>
+                                </div>
+                                <div class="mx-1">|</div>
+                                <div>
+                                    <a href="/account.html" class="text-dark text-decoration-none">REGISTER</a>
+                                </div>
+                                <div class="mx-2">
+                                    <i class="bi bi-heart-fill"></i>
+                                </div>
+                                <div>
+                                    <a href="/cart.html" class="text-decoration-none text-dark">Cart [1]</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="position-absolute pt-1 w-100 top-90 mega-menu z-1" style="display: none;" x-show="showFindLocation"
-                    x-on:mouseenter="showFindLocation = true" x-on:mouseleave="showFindLocation = false">
-                    <div class="w-100 bg-dark">
-                        <div class="container text-white">
-                            <div class="py-4">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div>
-                                            <h5 class="text-warning text-uppercase">
-                                                Location - find a restaurant
-                                            </h5>
+                <div>
+                    <div class="position-absolute pt-1 w-100 top-90 mega-menu z-1" style="display: none;"
+                        x-show="showFindLocation" x-on:mouseenter="showFindLocation = true"
+                        x-on:mouseleave="showFindLocation = false">
+                        <div class="w-100 bg-dark">
+                            <div class="container text-white">
+                                <div class="py-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
                                             <div>
-                                                Enter city, state or postal code
-                                            </div>
-                                            <div class="my-2">
-                                                <div class="d-flex">
-                                                    <div class="">
-                                                        <input type="text" class="rounded-0 shadow-none form-control">
+                                                <h5 class="text-warning text-uppercase">
+                                                    Location - find a restaurant
+                                                </h5>
+                                                <div>
+                                                    Enter city, state or postal code
+                                                </div>
+                                                <div class="my-2">
+                                                    <div class="d-flex">
+                                                        <div class="">
+                                                            <input type="text" class="rounded-0 shadow-none form-control">
+                                                        </div>
+                                                        <a href="/location.html">
+                                                            <div class="btn btn-warning rounded-0">Find</div>
+                                                        </a>
                                                     </div>
-                                                    <a href="/location.html">
-                                                        <div class="btn btn-warning rounded-0">Find</div>
-                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="/location.html" class="text-decoration-none text-warning">See all
+                                                        locations</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-md-4">
                                             <div>
-                                                <a href="/location.html" class="text-decoration-none text-warning">See all locations</a>
+                                                <h5 class="text-warning">
+                                                    DINE-IN MENU / CALORIE COUNT
+                                                </h5>
+                                                <div>
+                                                    <a href="/menu1.html"
+                                                        class="text-decoration-none text-warning text-uppercase">> HIGH 5
+                                                        SPECIALS & DINE-IN MENU</a>
+                                                </div>
+                                                <div>
+                                                    <a href="/location.html"
+                                                        class="text-decoration-none text-warning text-uppercase">> FIND
+                                                        LOCATIONS</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div>
-                                            <h5 class="text-warning">
-                                                DINE-IN MENU / CALORIE COUNT
-                                            </h5>
+                                        <div class="col-md-4">
                                             <div>
-                                                <a href="/menu1.html" class="text-decoration-none text-warning text-uppercase">> HIGH 5 SPECIALS & DINE-IN MENU</a>
-                                            </div>
-                                            <div>
-                                                <a href="/location.html" class="text-decoration-none text-warning text-uppercase">> FIND LOCATIONS</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div>
-                                            <h5 class="text-warning">
-                                                GOOD FOOD CARD
-                                            </h5>
-                                            <div>
-                                                Load up on Fresh Healthy Good Food with our Gift Card - gift it to a friend or treat yourself
-                                            </div>
-                                            <div>
-                                                <a href="/page.html" class="text-decoration-none text-warning">Click here</a>
+                                                <h5 class="text-warning">
+                                                    GOOD FOOD CARD
+                                                </h5>
+                                                <div>
+                                                    Load up on Fresh Healthy Good Food with our Gift Card - gift it to a friend
+                                                    or treat yourself
+                                                </div>
+                                                <div>
+                                                    <a href="/page.html" class="text-decoration-none text-warning">Click
+                                                        here</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -133,81 +210,123 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="position-absolute w-100 top-90 mega-menu z-1 pt-1" style="display: none;" x-show="showMenu"
-                    x-on:mouseenter="showMenu = true" x-on:mouseleave="showMenu = false">
-                    <div class="w-100 bg-dark">
-                        <div class="container text-white">
-                            <div class="py-4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h5 class="text-warning text-uppercase">
-                                                ORDER ONLINE NOW
-                                            </h5>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            BOXNICKEL'S
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            BREAKFAST
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            LUNCH PACKAGES
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            SANDWICHES & WRAP
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            SALAD BOWLS
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            HOT ENTRIES
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            SWEETS & DESERTS
+                    <div class="position-absolute w-100 top-90 mega-menu z-1 pt-1" style="display: none;" x-show="showMenu"
+                        x-on:mouseenter="showMenu = true" x-on:mouseleave="showMenu = false">
+                        <div class="w-100 bg-dark">
+                            <div class="container text-white">
+                                <div class="py-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div>
+                                                <h5 class="text-warning text-uppercase">
+                                                    ORDER ONLINE NOW
+                                                </h5>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div>
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    BOXNICKEL'S
+                                                                </div>
+                                                            </a>
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    BREAKFAST
+                                                                </div>
+                                                            </a>
+        
+                                                            <a href="menu1.html" class="text-decoration-none"></a>
+                                                            <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                role="button">
+                                                                LUNCH PACKAGES
+                                                            </div>
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    SANDWICHES & WRAP
+                                                                </div>
+                                                            </a>
+        
+                                                            <a href="menu1.html" class="text-decoration-none"></a>
+                                                            <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                role="button">
+                                                                SALAD BOWLS
+                                                            </div>
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    HOT ENTRIES
+                                                                </div>
+                                                            </a>
+        
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    SWEETS & DESERTS
+                                                                </div>
+                                                            </a>
+        
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            BOXNICKEL'S
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            BREAKFAST
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            LUNCH PACKAGES
-                                                        </div>
-                                                        <div class="border-bottom border-1 border-white text-white mb-2" role="button">
-                                                            SANDWICHES & WRAP
+                                                    <div class="col-md-6">
+                                                        <div>
+                                                            <a href="menu1.html" class="text-decoration-none"></a>
+                                                            <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                role="button">
+                                                                BOXNICKEL'S
+                                                            </div>
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    BREAKFAST
+                                                                </div>
+                                                            </a>
+        
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    LUNCH PACKAGES
+                                                                </div>
+                                                            </a>
+        
+                                                            <a href="menu1.html" class="text-decoration-none">
+                                                                <div class="border-bottom border-1 border-white text-white mb-2"
+                                                                    role="button">
+                                                                    SANDWICHES & WRAP
+                                                                </div>
+                                                            </a>
+        
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <h5 class="text-warning">
-                                                CATERING FAQs
-                                            </h5>
-                                            <div>Looking for advice on how to feed a crowd at a lunch meeting? Find out more about suggested delivery times and ordering amounts.</div>
+                                        <div class="col-md-6">
                                             <div>
-                                                <a href="/page.html" class="text-decoration-none text-warning">Click here</a>
-                                            </div>
-                                            <div class="mt-4">
                                                 <h5 class="text-warning">
-                                                    BROWSE CATALOGUE
+                                                    CATERING FAQs
                                                 </h5>
-                                            </div>
-                                            <img width="140" src="https://www.pumpernickels.ca/fck_upload/Pum_pp0_Cover.jpg" alt="">
-                                            <div>Browse our 2022 Catering Catalogue of chef-created entrées, salads, sandwiches and wraps.</div>
-                                            <div>
-                                                <a href="/page.html" class="text-decoration-none text-warning">Click here</a>
+                                                <div>Looking for advice on how to feed a crowd at a lunch meeting? Find out more
+                                                    about suggested delivery times and ordering amounts.</div>
+                                                <div>
+                                                    <a href="/page.html" class="text-decoration-none text-warning">Click
+                                                        here</a>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <h5 class="text-warning">
+                                                        BROWSE CATALOGUE
+                                                    </h5>
+                                                </div>
+                                                <img width="140" src="https://www.pumpernickels.ca/fck_upload/Pum_pp0_Cover.jpg"
+                                                    alt="">
+                                                <div>Browse our 2022 Catering Catalogue of chef-created entrées, salads,
+                                                    sandwiches and wraps.</div>
+                                                <div>
+                                                    <a href="/page.html" class="text-decoration-none text-warning">Click
+                                                        here</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
