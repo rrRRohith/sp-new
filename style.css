@@ -23,18 +23,10 @@ body{
     background: var(--bs-gray-200) !important;
 }
 
-.object-position-center{
-    object-position: center;
-}
-
 .product-card:hover .product-name{
     color: #fff;
     background-color: var(--bs-warning);
 }
-.bg-dark-50{
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 
 .warning-border {
     border-left: 15px solid var(--bs-warning);
@@ -47,10 +39,6 @@ body{
     border-top: 28px solid transparent;
     border-bottom: 28px solid transparent;
     background-color: var(--bs-warning);
-}
-
-.flex-1{
-    flex: 1;
 }
 
 .top-90{
